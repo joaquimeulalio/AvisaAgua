@@ -1,0 +1,33 @@
+A) Infra:
+   - instalar VirtualBox no PC (para criar VMs)
+   - criar uma VM Linux Ubuntu 22 no PC
+   - logar na VM, experimentar browser firefox, https://go.dev/tour/list
+   - instalar o "code" no linux, instalar o pluging golang dentro do code
+   - fazer o tutorial basico de golang em https://go.dev/tour/list
+		welcome
+        Packages, variables, and functions.
+		Flow control statements: for, if, else, switch and defer
+   - aprender os comandos basicos de um shell linux (console linha de comandos) 
+        CTRL SHFT T abre um novo console
+		estrutura de diretorios, ls, cat, cd, ls -l, mkdir, gedit, ...
+   - criar um folder no /home/lorenzo/avisaagua
+   - criar um arquivo "medicoes.txt" neste folder, editar com gedit e salvar uma linha qualquer
+
+B) Testes com golang ou java
+1) fazer app "test1.go" (ou test1.java) no linux que apenas imprime "Hello Test1" 
+   ls:
+		/home/loranzo/avisaagua/test1.go
+   pwd:
+		/home/loranzo/avisaagua
+   executar:
+		go run test1.go
+2) test1.go: a cada vez que executa adicona uma linha no arquivo medicoes.txt
+3) incluir data e hora na linha salva acima (a cada vez que executa)
+4) passar um "command line argument" para o programa test1.go, salvar no arquivo medicoes:
+		go run test1.go abcdef
+		cat /home/lorenzo/avisaagua/medicoes.txt
+			<linha 1...>
+			<linha 2...>
+			<abcdef>
+
+C) Testes com web server no linux
