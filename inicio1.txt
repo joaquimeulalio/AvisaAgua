@@ -1,4 +1,4 @@
-A) Infra:
+###### A) Infra:
    - instalar VirtualBox no PC (para criar VMs)
    - criar uma VM Linux Ubuntu 22 no PC
    - logar na VM, experimentar browser firefox, https://go.dev/tour/list
@@ -13,7 +13,8 @@ A) Infra:
    - criar um folder no /home/lorenzo/avisaagua
    - criar um arquivo "medicoes.txt" neste folder, editar com gedit e salvar uma linha qualquer
 
-B) Testes com golang ou java
+
+###### B) Testes com golang ou java
 1) fazer app "test1.go" (ou test1.java) no linux que apenas imprime "Hello Test1" 
    ls:
 		/home/loranzo/avisaagua/test1.go
@@ -30,4 +31,7 @@ B) Testes com golang ou java
 			<linha 2...>
 			<abcdef>
 
-C) Testes com web server no linux
+
+###### C) Testes com web server no linux
+1) fazer um web server que responda a pagina "http://avisaagua/leitura"
+    how to make a simple golang gin server on my pc and export the http port to thw internet ?
