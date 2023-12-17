@@ -5,44 +5,42 @@ import (
     "os"
 
 )
-
 func main() {
-
-
     router := gin.Default()
-    router.GET("/avisaagua/hello", hello)
 	router.GET("/avisaagua/teste", teste)
-
+    router.GET("/avisaagua/leitura", leitura)
     router.Run(":8080")
 }
-
-func hello(c *gin.Context){
+func leitura(c *gin.Context){
 	file, err := os.OpenFile("medicoes.txt",os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
 		fmt.Println(err)
 	}
 		currentTime := time.Now()
-	s:=	fmt.Sprintf("%d-%d-%d %d:%d:%d\n",
+	s:=	fmt.Sprintf("%d-%d-%d %d:%d:%d",
 		currentTime.Year(),
 		currentTime.Month(),
 		currentTime.Day(),
 		currentTime.Hour(),
 		currentTime.Minute(),
 		currentTime.Second())
-	
-	_, err =file.WriteString("\nLinha nova " +s)
-	
-
-
-	c.JSON(200, gin.H{
-		"message": "Hello avisaAgua!",
-	})
+		s1 := c.DefaultQuery("sensor1", "null")
+		s2 := c.DefaultQuery("sensor2", "null")
+		s3 := c.DefaultQuery("sensor3", "null")
+	if string(s1) == "null" || string(s2) == "null" || string(s3) == "null"{
+		c.JSON(400, gin.H{
+			"message": "Error, informacoes faltando",
+		})
+	}else{
+		_, err =file.WriteString(s +" sensor1 = " +s1 +" sensor2 = " +s2 +" sensor3 = " +s3 +"\n")
+		c.JSON(200, gin.H{
+		"message": "Leitura okay!",
+		})
+	}	
 }
-
 func teste(c *gin.Context){
 
 	c.JSON(200, gin.H{
 		"message": "teste avisaAgua!",
 	})
-
 }
