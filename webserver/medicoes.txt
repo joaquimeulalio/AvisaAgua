@@ -1,0 +1,2 @@
+2023-12-21 19:52:33 Sensor1 = ligado Sensor2 = ligado Sensor3 = desligado Situacao: LIGOU MOTOR
+2023-12-21 19:52:47 Sensor1 = ligado Sensor2 = ligado Sensor3 = desligado Situacao: LIGOU MOTOR
