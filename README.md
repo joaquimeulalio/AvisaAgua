@@ -49,9 +49,12 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - o codigo do arduino vai ficar em "arduino"
   
 12) acessar o github com chaves SSH
+- ver se git clone (selecionar opcao SSH) funciona (nao deve funcionar pq nao tem a chave publica no github)
 - gerar a chave publica e privada
+      https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 - fazer upload da chave publica para o github.com
-- ver se git clone funciona
+      https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+- ver se git clone (selecionar opcao SSH) funciona (agora ja deve funcionar)
 - fazer uma mudanca minima em main.go, entao no linux a) git status b) git add main.go c) git commit "descricao do commit" d) git push, ver no browser se atualizou
 
 13) vamos preparar o main.go para crescer.
