@@ -40,7 +40,7 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
   - calcular se quer ou nao ligar o motor para drenar a agua baseado nos valores dos 3 sensores
   - retornar "LIGAR MOTOR" ou "DESLIGAR MOTOR" para o comando GET http://<url>/avisaagua/leitura?sensor1=<valor>&sensor2=<valor>&sensor3=<valor>
 
-11) Publicar a URL
+11) Publicar a URL no linux
 - usar "ngrok http 8080"
 - testar com browser em outro computador
 
