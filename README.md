@@ -55,7 +55,12 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - fazer upload da chave publica para o github.com
       https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 - ver se git clone (selecionar opcao SSH) funciona (agora ja deve funcionar)
-- fazer uma mudanca minima em main.go, entao no linux a) git status b) git add main.go c) git commit "descricao do commit" d) git push, ver no browser se atualizou
+- fazer uma mudanca minima em main.go, entao no linux
+      a) git status
+      b) git add main.go
+      c) git commit "descricao do commit"
+      d) git push
+      e) ver no browser github se atualizou
 
 13) vamos preparar o main.go para crescer.
 - vamos ter duas funcionalidades 1) receber as leituras e 2) uma pagina web para monitorar as ultimas leituras
