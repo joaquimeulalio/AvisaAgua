@@ -79,12 +79,11 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - main.go em vez de usar "leitura" como router vai passar a usar "xyz.leitura"
 - ver se continua funcionando
   
-
-21) Mover o handler do hello para dentro do pacote (2)
+18) Mover o handler do hello para dentro do pacote (2)
 - fazer um banner html simples mas com letras grandes para "hello"
 - criar uma rota "hello2", mostrar a mesma coisa que "hello" porem incluir data e hora do servidor
 
-22) Mais avançado, vamos separar em layers
+19) Mais avançado, vamos separar em layers
 - o package main é o "server" layer. o "gin" web server so deve existir ali.
 - o "xyz" é o "logic" layer que vc ja tem.
 - se formos colocar database teremos o data layer no futuro
@@ -92,7 +91,7 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - vc vai precisar um "refactoring" na leirura para fazer a mesma coisa sem o gin ali dentro. passe como parametro os valores dos 3 sensores mas nao o gin.
 - 
 
-23) vamos criar um "unit test" para testar a logica da sua funcao.
+20) vamos criar um "unit test" para testar a logica da sua funcao.
 - assim se no futuro nos mesmos ou outro cara alterar o codigo e estraga-lo o unit test vai ajudar a achar o erro
 - https://go.dev/doc/tutorial/add-a-test
 - criar o arquivo zyx_test.go
