@@ -44,4 +44,27 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - usar "ngrok http 8080"
 - testar com browser em outro computador
 
-11) 
+11) mover o codigo fonte par ao github
+- mover o main.go para dentro do diretorio "webserver"
+- o codigo do arduino vai ficar em "arduino"
+  
+12) acessar o github com chaves SSH
+- gerar a chave publica e privada
+- fazer upload da chave publica para o github.com
+- ver se git clone funciona
+- fazer uma mudanca minima em main.go, entao no linux a) git status b) git add main.go c) git commit "descricao do commit" d) git push, ver no browser se atualizou
+
+13) vamos preparar o main.go para crescer.
+- vamos ter duas funcionalidades 1) receber as leituras e 2) uma pagina web para monitorar as ultimas leituras
+- em (1) no futuro a gente pode hum ... trocar de arquivo medicoes.txt para um database, e suportar mais de uma casa no mesmo webserver
+- em (2) podemos ter uma pagina para mostrar a ultima medicao, as da ultima hora, ultimo dia etc. ultima vez que alagou. os ultimos 5 alagamentos, etc. tipo relatorios.
+- então vamos dividir o fonte em pacotes golang, um pacote para (1) e um pacote para (2)
+
+14) Escolher o nome dos 2 packages
+- https://go.dev/blog/package-names
+- escolher os dois nomes
+- 
+15) 
+16)  
+17) 
+18) 
