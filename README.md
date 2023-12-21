@@ -64,7 +64,43 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - https://go.dev/blog/package-names
 - escolher os dois nomes
 - 
-15) 
-16)  
-17) 
+15) Para o pacote (1) de nome "xyz"
+  - criar a estrutura de diretorios e arquivos:
+         avisaagua (ja tinha)
+            main.go  (feito em 13)
+            xyz (diretorio)
+                zyz.go  (contendo package xyz na primeira linha)
+  - comitar esta estrutura no github, fazer push.             
+- 
+16) Criar um modulo no nivel do main.go com "go mod init <nome do modulo>
+- https://go.dev/doc/tutorial/create-module
+  
+17) Mover a funcao "leitura()" para dentro do pacote xyz
+- main.go em vez de usar "leitura" como router vai passar a usar "xyz.leitura"
+- ver se continua funcionando
 18) 
+19) 
+
+20) 
+21) Mover o handler do hello para dentro do pacote (2)
+- fazer um banner html simples mas com letras grandes para "hello"
+- criar uma rota "hello2", mostrar a mesma coisa que "hello" porem incluir data e hora do servidor
+
+22) Mais avançado, vamos separar em layers
+- o package main é o "server" layer. o "gin" web server so deve existir ali.
+- o "xyz" é o "logic" layer que vc ja tem.
+- se formos colocar database teremos o data layer no futuro
+- entao o "gin" fica no layer server e nao pode invadir o layer logic.
+- vc vai precisar um "refactoring" na leirura para fazer a mesma coisa sem o gin ali dentro. passe como parametro os valores dos 3 sensores mas nao o gin.
+- 
+
+23) vamos criar um "unit test" para testar a logica da sua funcao.
+- assim se no futuro nos mesmos ou outro cara alterar o codigo e estraga-lo o unit test vai ajudar a achar o erro
+- https://go.dev/doc/tutorial/add-a-test
+- criar o arquivo zyx_test.go
+- e um test para a funcao leitura.
+        exemplo:
+          s1=ligado s2=ligado s3=ligado o resultado esperado da funcao é "ligar motor"
+          s1=desligado s2=ligado s3=ligado o resultado esperado da funcao é "desligar motor"
+          s1=abobora s2=ligado s3=ligado o resultado esperado da funcao é "erro"
+  
