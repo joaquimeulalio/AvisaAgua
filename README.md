@@ -63,7 +63,7 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 14) Escolher o nome dos 2 packages
 - https://go.dev/blog/package-names
 - escolher os dois nomes
-- 
+  
 15) Para o pacote (1) de nome "xyz" (exemplo)
   - criar a estrutura de diretorios e arquivos:
          avisaagua (diretorio ja tinha)
@@ -71,7 +71,7 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
             xyz (diretorio)
                 zyz.go  (contendo package xyz na primeira linha)
   - comitar esta estrutura no github, fazer push.             
-- 
+  
 16) Criar um modulo no nivel do main.go com "go mod init <nome do modulo>"
 - https://go.dev/doc/tutorial/create-module
   
@@ -89,7 +89,7 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - se formos colocar database teremos o data layer no futuro
 - entao o "gin" fica no layer server e nao pode invadir o layer logic.
 - vc vai precisar um "refactoring" na leirura para fazer a mesma coisa sem o gin ali dentro. passe como parametro os valores dos 3 sensores mas nao o gin.
-- 
+  
 
 20) vamos criar um "unit test" para testar a logica da sua funcao.
 - assim se no futuro nos mesmos ou outro cara alterar o codigo e estraga-lo o unit test vai ajudar a achar o erro
