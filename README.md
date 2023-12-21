@@ -44,7 +44,7 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - usar "ngrok http 8080"
 - testar com browser em outro computador
 
-11) mover o codigo fonte par ao github
+11) mover o codigo fonte para o github
 - mover o main.go para dentro do diretorio "webserver"
 - o codigo do arduino vai ficar em "arduino"
   
@@ -64,24 +64,22 @@ monitora nivel e bombeia agua da casa de maquinas das piscina
 - https://go.dev/blog/package-names
 - escolher os dois nomes
 - 
-15) Para o pacote (1) de nome "xyz"
+15) Para o pacote (1) de nome "xyz" (exemplo)
   - criar a estrutura de diretorios e arquivos:
-         avisaagua (ja tinha)
-            main.go  (feito em 13)
+         avisaagua (diretorio ja tinha)
+            main.go  (feito em 11)
             xyz (diretorio)
                 zyz.go  (contendo package xyz na primeira linha)
   - comitar esta estrutura no github, fazer push.             
 - 
-16) Criar um modulo no nivel do main.go com "go mod init <nome do modulo>
+16) Criar um modulo no nivel do main.go com "go mod init <nome do modulo>"
 - https://go.dev/doc/tutorial/create-module
   
 17) Mover a funcao "leitura()" para dentro do pacote xyz
 - main.go em vez de usar "leitura" como router vai passar a usar "xyz.leitura"
 - ver se continua funcionando
-18) 
-19) 
+  
 
-20) 
 21) Mover o handler do hello para dentro do pacote (2)
 - fazer um banner html simples mas com letras grandes para "hello"
 - criar uma rota "hello2", mostrar a mesma coisa que "hello" porem incluir data e hora do servidor
